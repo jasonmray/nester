@@ -23,8 +23,8 @@
 
 #include <windows.h>
 #include <windowsx.h>
-#include <dinput.h>
 
+#include "dinput_headers.h"
 #include "types.h"
 #include "input_mgr.h"
 #include "iDIDevice.h"

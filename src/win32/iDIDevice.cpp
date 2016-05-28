@@ -25,140 +25,63 @@ iDIDevice::iDIDevice(HINSTANCE hInstance, GUID *guid)
 {
   LPDIRECTINPUT lpDI;
 
-  device1 = NULL;
-  device2 = NULL;
+  device8 = NULL;
 
   lpDI = iDirectX::getDirectInput(hInstance);
   if(!lpDI) throw "Error creating DirectInput interface in iDIDevice::iDIDevice";
 
-  if(iDirectX::IsVersion3())
-  {
-    device1 = iDirectX::DI_CreateDevice1(lpDI, guid);
-    if(!device1) throw "Error creating DirectInputDevice1";
-  }
-  else
-  {
-    device2 = iDirectX::DI_CreateDevice2(lpDI, guid);
-    if(!device2) throw "Error creating DirectInputDevice2";
+  device8 = iDirectX::DI_CreateDevice8(lpDI, guid);
+  if (!device8) {
+    throw "Error creating DirectInputDevice";
   }
 }
 
 iDIDevice::~iDIDevice()
 {
-  if(device2)
-  {
-    device2->Release();
-  }
-  else
-  {
-    device1->Release();
-  }
+  device8->Release();
 }
 
 HRESULT iDIDevice::SetDataFormat(LPCDIDATAFORMAT lpdf)
 {
-  if(device2)
-  {
-    return device2->SetDataFormat(lpdf);
-  }
-  else
-  {
-    return device1->SetDataFormat(lpdf);
-  }
+  return device8->SetDataFormat(lpdf);
 }
 
 HRESULT iDIDevice::GetObjectInfo(LPDIDEVICEOBJECTINSTANCE pdidoi, DWORD dwObj, DWORD dwHow)
 {
-  if(device2)
-  {
-    return device2->GetObjectInfo(pdidoi, dwObj, dwHow);
-  }
-  else
-  {
-    return device1->GetObjectInfo(pdidoi, dwObj, dwHow);
-  }
+  return device8->GetObjectInfo(pdidoi, dwObj, dwHow);
 }
 
 HRESULT iDIDevice::SetCooperativeLevel(HWND hwnd, DWORD dwFlags)
 {
-  if(device2)
-  {
-    return device2->SetCooperativeLevel(hwnd, dwFlags);
-  }
-  else
-  {
-    return device1->SetCooperativeLevel(hwnd, dwFlags);
-  }
+  return device8->SetCooperativeLevel(hwnd, dwFlags);
 }
 
 HRESULT iDIDevice::Acquire()
 {
-  if(device2)
-  {
-    return device2->Acquire();
-  }
-  else
-  {
-    return device1->Acquire();
-  }
+  return device8->Acquire();
 }
 
 HRESULT iDIDevice::Unacquire()
 {
-  if(device2)
-  {
-    return device2->Unacquire();
-  }
-  else
-  {
-    return device1->Unacquire();
-  }
+  return device8->Unacquire();
 }
 
 HRESULT iDIDevice::Poll()
 {
-  if(device2)
-  {
-    return device2->Poll();
-  }
-  else
-  {
-    return DI_OK;
-  }
+  return device8->Poll();
 }
 
 HRESULT iDIDevice::GetDeviceState(DWORD cbData, LPVOID lpvData)
 {
-  if(device2)
-  {
-    return device2->GetDeviceState(cbData, lpvData);
-  }
-  else
-  {
-    return device1->GetDeviceState(cbData, lpvData);
-  }
+  return device8->GetDeviceState(cbData, lpvData);
 }
 
 HRESULT iDIDevice::SetProperty(REFGUID rguidProp, LPCDIPROPHEADER pdiph)
 {
-  if(device2)
-  {
-    return device2->SetProperty(rguidProp, pdiph);
-  }
-  else
-  {
-    return device1->SetProperty(rguidProp, pdiph);
-  }
+  return device8->SetProperty(rguidProp, pdiph);
 }
 
 HRESULT iDIDevice::GetDeviceInfo(LPDIDEVICEINSTANCE pdidi)
 {
-  if(device2)
-  {
-    return device2->GetDeviceInfo(pdidi);
-  }
-  else
-  {
-    return device1->GetDeviceInfo(pdidi);
-  }
+  return device8->GetDeviceInfo(pdidi);
 }

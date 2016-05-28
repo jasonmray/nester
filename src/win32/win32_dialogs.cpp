@@ -24,7 +24,6 @@
 
 #include <commctrl.h>
 #include <ddraw.h>
-#include <mapiguid.h>
 #include <stdio.h>
 
 #include "win32_directinput_key_filter.h"
@@ -1000,11 +999,11 @@ static BOOL CALLBACK CTR_DIEnumDevicesProc(LPCDIDEVICEINSTANCE lpddi,
   {
     switch(lpddi->dwDevType & 0xFF)
     {
-      case DIDEVTYPE_KEYBOARD:
+      case DI8DEVTYPE_KEYBOARD:
         pData->type = CTR_DeviceInfo::KEYBOARD;
         break;
 
-      case DIDEVTYPE_JOYSTICK:
+      case DI8DEVTYPE_GAMEPAD:
         pData->type = CTR_DeviceInfo::JOYSTICK;
         break;
 
@@ -1622,13 +1621,13 @@ static void CTR_InitDeviceButtonPair(HWND hDevice, HWND hDeviceSrc, HWND hButton
 
     // enumerate DInput devices
     // enum keyboards first
-    lpDI->EnumDevices(DIDEVTYPE_KEYBOARD, CTR_DIEnumDevicesProc,
+    lpDI->EnumDevices(DI8DEVCLASS_KEYBOARD, CTR_DIEnumDevicesProc,
                       (LPVOID)hDevice, DIEDFL_ALLDEVICES);
     // then enum joysticks
     // make sure we don't get any joysticks bumpin around in DI3
     if(!iDirectX::IsVersion3())
     {
-      lpDI->EnumDevices(DIDEVTYPE_JOYSTICK, CTR_DIEnumDevicesProc,
+      lpDI->EnumDevices(DI8DEVCLASS_GAMECTRL, CTR_DIEnumDevicesProc,
                         (LPVOID)hDevice, DIEDFL_ALLDEVICES);
     }
   }

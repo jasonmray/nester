@@ -22,7 +22,7 @@
 #define _WIN32_DEFAULT_CONTROLS_H_
 
 #include "OSD_ButtonSettings.h"
-#include <dinput.h>
+#include "dinput_headers.h"
 
 #define WIN32_DEFAULT_UP_KEY      DIK_UP
 #define WIN32_DEFAULT_DOWN_KEY    DIK_DOWN

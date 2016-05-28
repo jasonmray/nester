@@ -19,7 +19,7 @@
 */
 
 #include "types.h"
-#include <iostream.h>
+#include <iostream>
 #include <string.h>
 #include "debug.h"
 #include "SNSS.h"
@@ -390,9 +390,11 @@ static int extract_SRAM(SnssSramBlock* block, NES* nes)
 {
   NES_6502::Context context;
 
+  uint32 i;
+
   // if nothing has been written to SRAM, don't write it out
   // has anything been written to Save RAM?
-  for(uint32 i = 0; i < sizeof(nes->SaveRAM); i++)
+  for(i = 0; i < sizeof(nes->SaveRAM); i++)
   {
     if(nes->SaveRAM[i] != 0x00) break;
   }

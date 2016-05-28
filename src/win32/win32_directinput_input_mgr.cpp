@@ -191,10 +191,10 @@ win32_directinput_device* win32_directinput_device::GetDevice(HWND hWnd, GUID* p
 
   switch(GET_DIDEVICE_TYPE(diDeviceInstance.dwDevType))
   {
-    case DIDEVTYPE_KEYBOARD:
+    case DI8DEVTYPE_KEYBOARD:
       return new win32_directinput_device_keyboard(hWnd, pGUID, nextDevice);
 
-    case DIDEVTYPE_JOYSTICK:
+    case DI8DEVTYPE_GAMEPAD:
       return new win32_directinput_device_joystick(hWnd, pGUID, nextDevice);
 
     default:

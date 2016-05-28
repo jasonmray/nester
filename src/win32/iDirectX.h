@@ -21,9 +21,10 @@
 #ifndef _IDIRECTX_H_
 #define _IDIRECTX_H_
 
+#include "dinput_headers.h"
+
 #include <windows.h>
 #include <ddraw.h>
-#include <dinput.h>
 #include <dsound.h>
 
 class iDirectX
@@ -42,8 +43,7 @@ public:
   static LPDIRECTINPUT getDirectInput(HINSTANCE hInstance);
   static int IsVersion3();
 
-  static LPDIRECTINPUTDEVICE2 DI_CreateDevice2(LPDIRECTINPUT lpdi, GUID* pguid);
-  static LPDIRECTINPUTDEVICE  DI_CreateDevice1(LPDIRECTINPUT lpdi, GUID* pguid);
+  static LPDIRECTINPUTDEVICE8 DI_CreateDevice8(LPDIRECTINPUT lpdi, GUID* pguid);
 
 protected:
   // directdraw

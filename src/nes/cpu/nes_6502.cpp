@@ -40,14 +40,14 @@ static nes6502_memread NESReadHandler[] =
 {
    /* $0 - $7FF is RAM */
    { 0x0800, 0xFFFF, NES_read },
-   { -1,     -1,     NULL }
+   { (uint32)-1, (uint32)-1, NULL }
 };
 
 static nes6502_memwrite NESWriteHandler[] =
 {
    /* $0 - $7FF is RAM */
    { 0x0800, 0xFFFF, NES_write },
-   { -1,     -1,     NULL}
+   { (uint32)-1, (uint32)-1, NULL}
 };
 
 

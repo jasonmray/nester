@@ -26,7 +26,7 @@
 #include "settings.h"
 
 // this function sets the OS-dependent input setting defaults
-#include <dinput.h>
+#include "dinput_headers.h"
 #include "OSD_ButtonSettings.h"
 #include "win32_default_controls.h"
 

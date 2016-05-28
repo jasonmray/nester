@@ -54,7 +54,7 @@ win32_windowed_NES_screen_mgr::win32_windowed_NES_screen_mgr(HWND wnd_handle)
     memset(&bmInfo->bmiHeader, 0x00, sizeof(bmInfo->bmiHeader));
     bmInfo->bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
     bmInfo->bmiHeader.biWidth = get_width()*2; // double size
-    bmInfo->bmiHeader.biHeight = -abs(get_height())*2; // top-down bitmap
+    bmInfo->bmiHeader.biHeight = -abs((int)get_height())*2; // top-down bitmap
     bmInfo->bmiHeader.biPlanes = 1;
     bmInfo->bmiHeader.biBitCount = 8;
     bmInfo->bmiHeader.biCompression = BI_RGB;
@@ -282,9 +282,9 @@ boolean win32_windowed_NES_screen_mgr::set_palette(const uint8 pal[256][3])
 
     for(int i = 0; i < 256; i++)
     {
-      palInfo->palPalEntry[i].peRed   = (BYTE)pal[i*3 + 0];
-      palInfo->palPalEntry[i].peGreen = (BYTE)pal[i*3 + 1];
-      palInfo->palPalEntry[i].peBlue  = (BYTE)pal[i*3 + 2];
+      palInfo->palPalEntry[i].peRed   = (BYTE)pal[i][0];
+      palInfo->palPalEntry[i].peGreen = (BYTE)pal[i][1];
+      palInfo->palPalEntry[i].peBlue  = (BYTE)pal[i][2];
       palInfo->palPalEntry[i].peFlags = (BYTE)PC_NOCOLLAPSE;// | PC_RESERVED;
 
       bmInfo->bmiPalette[i].rgbRed   = palInfo->palPalEntry[i].peRed;

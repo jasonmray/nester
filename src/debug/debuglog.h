@@ -21,9 +21,9 @@
 #ifndef _DEBUGLOG_H_
 #define _DEBUGLOG_H_
 
-#include <ostream.h>
-#include <strstrea.h>
-#include <iostream.h>
+#include <ostream>
+#include <strstream>
+#include <iostream>
 #include <string.h>
 #include <stdio.h>
 
@@ -69,7 +69,7 @@
   DEBUG_PRINT_STR(buf) \
   return *this;
 
-class debuglog : public ostream
+class debuglog
 {
 public:
   debuglog() 

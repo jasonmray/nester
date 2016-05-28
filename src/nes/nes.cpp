@@ -537,8 +537,9 @@ void NES::Save_SaveRAM()
   // does the ROM use save ram?
   if(!ROM->has_save_RAM()) return;
 
+  uint32 i;
   // has anything been written to Save RAM?
-  for(uint32 i = 0; i < sizeof(SaveRAM); i++)
+  for(i = 0; i < sizeof(SaveRAM); i++)
   {
     if(SaveRAM[i] != 0x00) break;
   }

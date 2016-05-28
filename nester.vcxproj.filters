@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6a717d91-4c69-4465-b645-55e2f7cfa36f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\nes">
+      <UniqueIdentifier>{9b20e20a-674f-4005-8a43-615ba472d46f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nes\apu">
+      <UniqueIdentifier>{459256e5-5e6f-49ce-9452-8996146ca8f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nes\cpu">
+      <UniqueIdentifier>{60fe5976-8148-4ab0-86c6-f72bb4ff69b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nes\ppu">
+      <UniqueIdentifier>{44208e8d-4ed6-4695-a886-92cfa6ea4a70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nes\libsnss">
+      <UniqueIdentifier>{a2bf6629-046a-46b9-9813-4b58083d4a20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nes\mapper">
+      <UniqueIdentifier>{4a0826a6-f782-4780-9e38-98b3a0345281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\win32">
+      <UniqueIdentifier>{576cc777-a463-45a2-8175-eab3d0953d9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0ebc5ebb-626c-40b9-9b62-745923969010}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\nes headers">
+      <UniqueIdentifier>{3609fdee-3d3a-4a81-99e1-a9ecaa18cfc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nes headers\apu headers">
+      <UniqueIdentifier>{aa7afdf5-7e18-4c72-a8eb-5fc604605479}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nes headers\cpu headers">
+      <UniqueIdentifier>{7b4e6d8a-a8ce-4e05-8d00-7bf575c40886}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nes headers\ppu headers">
+      <UniqueIdentifier>{cae38ccb-d477-4459-b2e2-75ff6e23899a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nes headers\libsnss headers">
+      <UniqueIdentifier>{749eb492-3f5d-4884-8eb3-ec3f4799b658}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nes headers\mapper headers">
+      <UniqueIdentifier>{d66e8c3b-2242-499c-bdc0-c913d7ed9822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\win32 headers">
+      <UniqueIdentifier>{7f9a3224-d81a-43b8-83db-41bc9a9d5f20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\debug headers">
+      <UniqueIdentifier>{9be1456c-03ef-40ca-8aa8-258afedfea29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67cb911d-ccc8-4677-9712-b7c41ad1c92c}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{18514a67-9eee-4b03-9a0d-939f0af7a19e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\recent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nes\nes.cpp">
+      <Filter>Source Files\nes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nes\nes_rom.cpp">
+      <Filter>Source Files\nes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nes\snss.cpp">
+      <Filter>Source Files\nes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nes\Apu\nes_apu.c">
+      <Filter>Source Files\nes\apu</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\NES\APU\nes_apu_wrapper.cpp">
+      <Filter>Source Files\nes\apu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nes\apu\vrcvisnd.c">
+      <Filter>Source Files\nes\apu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nes\cpu\nes6502.c">
+      <Filter>Source Files\nes\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nes\cpu\nes_6502.cpp">
+      <Filter>Source Files\nes\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nes\ppu\nes_ppu.cpp">
+      <Filter>Source Files\nes\ppu</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Nes\libsnss\libsnss.c">
+      <Filter>Source Files\nes\libsnss</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nes\mapper\nes_mapper.cpp">
+      <Filter>Source Files\nes\mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nes\mapper\NES_mapper_Konami.cpp">
+      <Filter>Source Files\nes\mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\WIN32\iDDraw.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\WIN32\iDIDevice.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\WIN32\iDirectX.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\WIN32\win32_default_controls.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\win32_dialogs.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\WIN32\win32_directinput_input_mgr.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\WIN32\win32_directinput_key_filter.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\WIN32\win32_directinput_keytable.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\win32_directory.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\win32_directsound_sound_mgr.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\win32_emu.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\win32_fullscreen_NES_screen_mgr.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\WIN32\win32_GUID.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\WIN32\win32_INPButtons.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\WIN32\win32_NES_pad.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\win32_NES_screen_mgr.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\win32_settings.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\win32_shellext.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\win32_timing.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\win32_windowed_NES_screen_mgr.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\winmain.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\INPButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\input_mgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\null_sound_mgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pixmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\recent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\screen_mgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sound_mgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\nes.h">
+      <Filter>Header Files\nes headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\nes_pad.h">
+      <Filter>Header Files\nes headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\nes_pal.h">
+      <Filter>Header Files\nes headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\nes_rom.h">
+      <Filter>Header Files\nes headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\nes_screen_mgr.h">
+      <Filter>Header Files\nes headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\nes_settings.h">
+      <Filter>Header Files\nes headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\snss.h">
+      <Filter>Header Files\nes headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\apu\nes_apu.h">
+      <Filter>Header Files\nes headers\apu headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nes\Apu\nes_apu_wrapper.h">
+      <Filter>Header Files\nes headers\apu headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\apu\vrcvisnd.h">
+      <Filter>Header Files\nes headers\apu headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nes\cpu\nes6502.h">
+      <Filter>Header Files\nes headers\cpu headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\cpu\nes_6502.h">
+      <Filter>Header Files\nes headers\cpu headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\ppu\nes_ppu.h">
+      <Filter>Header Files\nes headers\ppu headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Nes\libsnss\libsnss.h">
+      <Filter>Header Files\nes headers\libsnss headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\mapper\nes_mapper.h">
+      <Filter>Header Files\nes headers\mapper headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\mapper\NES_mapper_Konami.h">
+      <Filter>Header Files\nes headers\mapper headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\WIN32\iDDraw.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\WIN32\iDIDevice.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\WIN32\iDirectX.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Win32\OSD_ButtonSettings.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\WIN32\OSD_NES_graphics_settings.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\WIN32\win32_default_controls.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\win32_dialogs.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\win32_directinput_input_mgr.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\WIN32\win32_directinput_key_filter.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\WIN32\win32_directinput_keytable.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\win32_directory.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\win32_directsound_sound_mgr.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\win32_emu.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\win32_fullscreen_NES_screen_mgr.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\WIN32\win32_globals.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\WIN32\win32_GUID.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\WIN32\win32_INPButtons.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Win32\win32_NES_pad.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\win32_NES_screen_mgr.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\win32_shellext.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\win32_timing.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\win32_windowed_NES_screen_mgr.h">
+      <Filter>Header Files\win32 headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\debug\debug.h">
+      <Filter>Header Files\debug headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\debug\debuglog.h">
+      <Filter>Header Files\debug headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\debug\HEX.h">
+      <Filter>Header Files\debug headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\debug\mono.h">
+      <Filter>Header Files\debug headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\resource\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dinput_headers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Src\Win32\Resource\nester.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\win32\resource\nester.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\win32\resource\postbuild.bat">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="src\win32\resource\profile.bat">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="COPYING.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+    <Text Include="docs\issues.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+    <Text Include="docs\loopy-2005.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+    <Text Include="docs\mappers.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+    <Text Include="docs\nessound.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+    <Text Include="docs\nestech.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+    <Text Include="docs\project.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+    <Text Include="docs\readme.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+    <Text Include="docs\snss-tff.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+    <Text Include="docs\todo.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

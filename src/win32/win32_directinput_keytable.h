@@ -22,7 +22,7 @@
 #define WIN32_DIRECTINPUT_KEYTABLE
 
 #include "types.h"
-#include <dinput.h>
+#include "dinput_headers.h"
 
 struct win32_directinput_keytable_entry
 {

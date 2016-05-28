@@ -40,9 +40,7 @@ public:
   HRESULT GetDeviceInfo(LPDIDEVICEINSTANCE pdidi);
 
 protected:
-  LPDIRECTINPUTDEVICE2 device2;
-  LPDIRECTINPUTDEVICE  device1;
-
+  LPDIRECTINPUTDEVICE8 device8;
 private:
 };
 

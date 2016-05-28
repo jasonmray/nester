@@ -156,10 +156,10 @@ LPDIRECTINPUT iDirectX::getDirectInput(HINSTANCE hInstance)
   if(!lpDI)
   {
     version3 = 0;
-    if(FAILED(DirectInputCreate(hInstance, DIRECTINPUT_VERSION, &lpDI, NULL)))
+    if(FAILED(DirectInput8Create(hInstance, DIRECTINPUT_VERSION, IID_IDirectInput8, (LPVOID *)&lpDI, NULL)))
     {
       version3 = 1;
-      DirectInputCreate(hInstance, 0x0300, &lpDI, NULL);
+      DirectInput8Create(hInstance, 0x0300, IID_IDirectInput8, (LPVOID *)&lpDI, NULL);
     }
     lastDIInstance = hInstance;
   }
@@ -181,44 +181,26 @@ LPDIRECTINPUT iDirectX::getDirectInput(HINSTANCE hInstance)
 
 void iDirectX::releaseDirectInput()
 {
-	if(lpDI)
+  if(lpDI)
   {
-		lpDI->Release();
+    lpDI->Release();
     lpDI = NULL;
   }
 }
 
 int iDirectX::IsVersion3()
 {
-  return version3;
+  return 0;
 }
 
-LPDIRECTINPUTDEVICE2 iDirectX::DI_CreateDevice2(LPDIRECTINPUT lpdi, GUID* pguid)
+LPDIRECTINPUTDEVICE8 iDirectX::DI_CreateDevice8(LPDIRECTINPUT lpdi, GUID* pguid)
 {
-  LPDIRECTINPUTDEVICE  lpdid1;  // Temporary.
-  LPDIRECTINPUTDEVICE2 lpdid2;  // The keeper.
+  LPDIRECTINPUT8 lpdi8 = (LPDIRECTINPUT8)lpdi;
+  LPDIRECTINPUTDEVICE8 device;
 
-  if(FAILED(lpdi->CreateDevice(*pguid, &lpdid1, NULL)))
-    return NULL;
-
-  if(FAILED(lpdid1->QueryInterface(IID_IDirectInputDevice2, (void**)&lpdid2)))
-  {
-    lpdid1->Release();
+  if (FAILED(lpdi8->CreateDevice(*pguid, &device, NULL))) {
     return NULL;
   }
-
-  lpdid1->Release();
-  return lpdid2;
+  return device;
 }
 
-LPDIRECTINPUTDEVICE iDirectX::DI_CreateDevice1(LPDIRECTINPUT lpdi, GUID* pguid)
-{
-  LPDIRECTINPUTDEVICE lpdid1;
-
-  if(FAILED(lpdi->CreateDevice(*pguid, &lpdid1, NULL)))
-  {
-    return NULL;
-  }
-
-  return lpdid1;
-}

@@ -19,7 +19,7 @@
 */
 
 #include "win32_directinput_key_filter.h"
-#include <dinput.h>
+#include "dinput_headers.h"
 
 uint8 win32_directinput_key_filter::OKKeys[] =
 {

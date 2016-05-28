@@ -21,7 +21,7 @@
 #ifndef _HEX_H_
 #define _HEX_H_
 
-#include <iostream.h>
+#include <iostream>
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -32,7 +32,6 @@
 
 class HEX
 {
-  friend ostream& operator<< (ostream& o, const HEX& h);
 public:
   HEX(uint32 num, int width = 0)
   {

@@ -23,8 +23,7 @@
 #include "win32_timing.h"
 #include "debug.h"
 #include "NES_settings.h"
-
-#include <dinput.h>
+#include "dinput_headers.h"
 
 #define PROFILE
 
@@ -390,7 +389,7 @@ void win32_emu::do_frame()
     frames_per_sec =
       (double)frames_this_sec * (1000.0/((double)cur_time - (double)last_profile_sec_time));
 
-    LOG((int)frames_per_sec << " FPS (" 
+    LOG((int)frames_per_sec << " FPS ("
       << (int)(100.0 * ((float)frames_per_sec / 60.0)) << "%)" << endl);
 
     frames_this_sec = 0;

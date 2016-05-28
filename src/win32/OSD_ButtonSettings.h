@@ -25,9 +25,9 @@
 
 #include "types.h"
 #include "debug.h"
+#include "dinput_headers.h"
 
 #include <windows.h>
-#include <dinput.h>
 
 class OSD_ButtonSettings
 {
